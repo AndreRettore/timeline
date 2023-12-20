@@ -16,6 +16,15 @@ body {
   margin-right: 30px;
 }
 
+.container2 {
+  text-align: center;
+  background-color: #000033;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  margin-right: 30px;
+}
+
 h1 {
   margin-top: 0;
 }
