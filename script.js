@@ -113,11 +113,11 @@ function exitTimeline2() {
 
 // Função para verificar o status do Timeline 2
 function checkTimelineStatus2() {
-  timelineRef2.on("value", function(snapshot) {
-    var data2 = snapshot.val();
+  timelineRef2.on("value", function(snapshot2) {
+    var data2 = snapshot2.val();
     if (data2) {
       displayStatus2("Alguém está usando o OrçaFascio.");
-      displayLastAccess2(data.name2, data.timestamp2);
+      displayLastAccess2(data2.name2, data2.timestamp2);
     } else {
       displayStatus2("Ninguém está usando o OrçaFascio.");
       displayLastAccess2("", "");
@@ -125,7 +125,7 @@ function checkTimelineStatus2() {
   });
 }
 
-// Função para exibir o status2
+// Função para exibir o status 2
 function displayStatus2(status2) {
   var statusDiv2 = document.getElementById("status2");
   statusDiv2.textContent = status2;
@@ -141,12 +141,15 @@ function displayLastAccess2(name2, timestamp2) {
   }
 }
 
-// Manipulador de evento para envio do formulário
+// Manipulador de evento para envio do formulário 2
+// consertar essa parte mudar para name2, etc
+
+
 document.getElementById("entryForm2").addEventListener("submit", function(event) {
   event.preventDefault();
-  var nameInput = document.getElementById("name");
-  var name = nameInput.value;
+  var nameInput = document.getElementById("name2");
+  var name2 = nameInput.value;
 
-  registerEntry2(name);
+  registerEntry2(name2);
   nameInput.value = "";
 });
