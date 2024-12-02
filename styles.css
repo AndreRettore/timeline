@@ -1,10 +1,21 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: black;
+  height: 100vh; /* Garante que a altura seja igual à altura da janela */
+  background-color: #0f0f0f;
   color: white;
+  font-family: 'Manrope', sans-serif; /* Aplica a fonte Manrope */
+  margin: 0; /* Remove margens padrão */
+  overflow: hidden; /* Remove barras de rolagem */
+}
+
+.wrapper {
+  display: flex; /* Contêineres lado a lado */
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 30px; /* Espaçamento entre os contêineres */
+  margin-bottom: 20px; /* Espaçamento inferior */
 }
 
 .container {
@@ -13,7 +24,6 @@ body {
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  margin-right: 30px;
 }
 
 .container2 {
@@ -22,11 +32,12 @@ body {
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  margin-right: 30px;
 }
 
 h1 {
   margin-top: 0;
+  font-family: 'Manrope', sans-serif; /* Fonte personalizada */
+  font-weight: 700; /* Peso da fonte */
 }
 
 button {
@@ -37,8 +48,30 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-family: 'Manrope', sans-serif; /* Fonte personalizada */
+  font-weight: 500; /* Peso leve para botões */
 }
 
 button:hover {
   background-color: #660015;
+}
+
+#bottom-text {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px;
+  width: 100%; /* Garante largura total */
+  background-color: #000033;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  font-family: 'Manrope', sans-serif; /* Fonte personalizada */
+}
+
+a {
+  color: #1521ec; /* Link destaque */
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline; /* Sublinha ao passar o mouse */
 }

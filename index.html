@@ -2,39 +2,116 @@
 <html>
 <head>
   <title>Registro do Timeline e OrçaFascio</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="icon" href="https://www.exxata.com.br/wp-content/uploads/2021/03/pic-favicon-exxata.png">
   
+  <!-- Link para o arquivo CSS que contém o estilo do site -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  
+  <!-- Favicon para o site -->
+  <link rel="icon" href="https://exxata.com.br/wp-content/uploads/2024/01/favicon_exxata.svg">
+
+  <style>
+    /* Estilo para o botão de alternar modo */
+    .toggle-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 10px 20px;
+      background-color: #333333;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .toggle-button:hover {
+      background-color: #555555;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Registro do Timeline</h1>
-    <form id="entryForm">
-      <label for="name">Nome:</label>
-      <input type="text" id="name" required>
-      <button type="submit">Entrei no Timeline!</button>
-    </form>
-    <button onclick="exitTimeline()">Saí do Timeline!</button>
-    <button onclick="checkTimelineStatus()">Tem alguém usando o Timeline?</button>
-    <div id="status"></div>
-    <div id="lastAccess"></div>
+  <!-- Botão para alternar entre modo escuro e claro -->
+  <button id="toggle-mode" class="toggle-button">Alternar Modo</button>
+
+  <!-- Contêiner principal para organizar os elementos -->
+  <div class="wrapper">
+    <!-- Primeiro contêiner para o Timeline -->
+    <div class="container">
+      <h1>Registro do 
+        <!-- Link para o aplicativo do Timeline -->
+        <a target="_blank" rel="noopener noreferrer" href="https://online.officetimeline.com/app/">Timeline</a>
+      </h1>
+      
+      <!-- Formulário para entrada no Timeline -->
+      <form id="entryForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" required>
+        <button type="submit">Entrei no Timeline!</button>
+      </form>
+      
+      <!-- Botões adicionais para interagir com o Timeline -->
+      <button onclick="exitTimeline()">Saí do Timeline!</button>
+      <button onclick="checkTimelineStatus()">Tem alguém usando o Timeline?</button>
+      
+      <!-- Divs para exibir status e último acesso -->
+      <div id="status"></div>
+      <div id="lastAccess"></div>
+    </div>
+    
+    <!-- Segundo contêiner para o OrçaFascio -->
+    <div class="container2">
+      <h1>Registro do 
+        <!-- Link para o aplicativo do OrçaFascio -->
+        <a target="_blank" rel="noopener noreferrer" href="https://app.orcafascio.com/login/new">OrçaFascio</a>
+      </h1>
+      
+      <!-- Formulário para entrada no OrçaFascio -->
+      <form id="entryForm2">
+        <label for="name2">Nome:</label>
+        <input type="text" id="name2" required>
+        <button type="submit">Entrei no OrçaFascio!</button>
+      </form>
+      
+      <!-- Botões adicionais para interagir com o OrçaFascio -->
+      <button onclick="exitTimeline2()">Saí do OrçaFascio!</button>
+      <button onclick="checkTimelineStatus2()">Tem alguém usando o OrçaFascio?</button>
+      
+      <!-- Divs para exibir status e último acesso -->
+      <div id="status2"></div>
+      <div id="lastAccess2"></div>
+    </div>
   </div>
   
-  <div class="container2">
-    <h1>Registro do <a target="_blank" rel="noopener noreferrer" href="https://app.orcafascio.com/login/new">OrçaFascio</a></h1>
-    <form id="entryForm2">
-      <label for="name2">Nome:</label>
-      <input type="text" id="name2" required>
-      <button type="submit">Entrei no OrçaFascio!</button>
-    </form>
-    <button onclick="exitTimeline2()">Saí do OrçaFascio!</button>
-    <button onclick="checkTimelineStatus2()">Tem alguém usando o OrçaFascio?</button>
-    <div id="status2"></div>
-    <div id="lastAccess2"></div>
+  <!-- Texto no rodapé com link para download da extensão do Timeline -->
+  <div id="bottom-text">
+    <p>
+      Clique 
+      <a target="_blank" rel="noopener noreferrer" href="https://www.mediafire.com/file/xrlqhiahugws4ay/Office_Timeline_7.03.03.00.rar/file">aqui</a> 
+      para instalar a extensão de Timeline para PowerPoint
+    </p>
   </div>
+  
+  <!-- Script para alternar entre modo escuro e claro -->
+  <script>
+    const toggleButton = document.getElementById('toggle-mode');
+    let isDarkMode = true; // Variável para controlar o estado do modo
+
+    toggleButton.addEventListener('click', () => {
+      if (isDarkMode) {
+        document.body.style.backgroundColor = '#eeeeee'; // Modo claro
+      } else {
+        document.body.style.backgroundColor = '#0f0f0f'; // Modo escuro
+      }
+      isDarkMode = !isDarkMode; // Alterna o estado
+    });
+  </script>
+
+  <!-- Scripts do Firebase -->
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-  <script src="script.js"></script>
   
+  <!-- Script externo do site -->
+  <script src="script.js"></script>
 </body>
 </html>
