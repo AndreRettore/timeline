@@ -1,13 +1,12 @@
 // Configurar a conexão com o Firebase 1 (CHAMONE)
 const firebaseConfig = {
-  apiKey: "AIzaSyCp37eYY4iaaV4u9DQDAvP0ryJ36zhj5xI",
-  authDomain: "exxatatimeline.firebaseapp.com",
-  databaseURL: "https://exxatatimeline-default-rtdb.firebaseio.com",
-  projectId: "exxatatimeline",
-  storageBucket: "exxatatimeline.appspot.com",
-  messagingSenderId: "335024989606",
-  appId: "1:335024989606:web:e49ce0ca1e30438c951b67",
-  measurementId: "G-8J4GQ9VD38"
+  apiKey: "AIzaSyBlVrNME8fD1W7a5NhtggQT30Cm1v6mE4U",
+  authDomain: "exxata-timeline.firebaseapp.com",
+  databaseURL: "https://exxata-timeline-default-rtdb.firebaseio.com",
+  projectId: "exxata-timeline",
+  storageBucket: "exxata-timeline.appspot.com",
+  messagingSenderId: "442283240555",
+  appId: "1:442283240555:web:f585d2675d831b3d39552e"
 };
 
 // Iniciando o App do firebase
